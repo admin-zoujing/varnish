@@ -3,8 +3,6 @@
 
 chmod -R 777 /usr/local/src/
 #1、时间时区同步，修改主机名
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-
 ntpdate cn.pool.ntp.org
 hwclock --systohc
 echo "*/30 * * * * root ntpdate -s 3.cn.poop.ntp.org" >> /etc/crontab
@@ -47,24 +45,3 @@ systemctl restart varnish
 #开始访问:varnish服务器的地址
 
 curl -I 127.0.0.1 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
